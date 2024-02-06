@@ -12,9 +12,9 @@ const db = {};
 let sequelize;
 if (config.use_env_variable) {
   //TODO make this work with test using config, prod using URL
-  sequelize = new Sequelize(DATABASE_URL);
+  sequelize = new Sequelize(process.env.DATABASE_URL);
 } else {
-  sequelize = new Sequelize(DATABASE_URL);
+  sequelize = new Sequelize(process.env.DATABASE_URL);
 }
 
 fs
